@@ -15,8 +15,8 @@ Test your Mi Band 10 sensors with **tiny games**!
 ![Compass](screenshots/sensors/known/comp.png)
 ![Wrist Tilt](screenshots/sensors/known/tilt.png)
 
-## All Sensors (Raw Values Readings)
-You can read raw values from sensors.
+## All Sensors (Reading Raw Values)
+You can read raw values from sensors.\
 Valid parsing isn't guaranteed though.
 
 ![Reading Example](screenshots/sensors/all/example.png)
@@ -27,4 +27,5 @@ Valid parsing isn't guaranteed though.
 If your Mi Band **completely freezes**:
 1. Connect the charger.
 2. Quickly **plug and unplug 10 times in a row**.
+
 [Here's](https://youtu.be/TCJuQgy0E74?t=317) a quick video demonstration
