@@ -23,6 +23,7 @@ function CreateRoot()
         border_width = 0,
         pad_all = padding
     })
+    main:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     local root = lvgl.Object(main, {
         outline_width = 0,
@@ -42,6 +43,7 @@ function CreateRoot()
             align_content = "center",
         }
     })
+    root:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     return main, root
 end
@@ -50,9 +52,11 @@ function CreateRootLocked()
     local lockedMain, lockedRoot = CreateRoot()
 
     lockedMain:clear_flag(0xFFFF)
-    lockedRoot:clear_flag(0xFFFF)
+    -- lockedRoot:clear_flag(0xFFFF)
     lockedMain:clear_flag(lvgl.FLAG.SCROLLABLE)
-    lockedRoot:clear_flag(lvgl.FLAG.SCROLLABLE)
+    -- lockedRoot:clear_flag(lvgl.FLAG.SCROLLABLE)
+    
+    lockedMain:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     return lockedMain, lockedRoot
 end
@@ -61,7 +65,7 @@ end
 function CreateBtn(parent, name)
     local root = parent:Object(nil, {
         w = ContentWidth,
-        h = 50,
+        h = 65,
         bg_color = "#222",
         bg_opa = lvgl.OPA(100),
         border_width = 0,
@@ -71,6 +75,7 @@ function CreateBtn(parent, name)
         shadow_color = "#111",
     })
     root:clear_flag(lvgl.FLAG.SCROLLABLE)
+    root:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     local label = root:Label {
         text = name,
@@ -94,6 +99,7 @@ function CreateLabel(parent, name)
         text = name
     })
     label:clear_flag(lvgl.FLAG.SCROLLABLE)
+    label:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     return label
 end
@@ -106,6 +112,7 @@ function CreateCenteredLabel(parent, name)
         bg_opa = lvgl.OPA(100),
         border_width = 0
     })
+    root:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     local label = root:Label {
         text = name,
@@ -143,6 +150,7 @@ function CreateExpandingContainer(parent)
         flex_grow = 1
     })
     container:clear_flag(lvgl.FLAG.SCROLLABLE)
+    container:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     return container
 end
@@ -166,6 +174,7 @@ function CreateFlexboxContainer(parent)
         },
         flex_grow = 1
     })
+    flexbox:add_flag(lvgl.FLAG.EVENT_BUBBLE)
 
     return flexbox
 end

@@ -37,12 +37,13 @@ local function init()
 
     local aboutText =
 [[Sensor Test
-Version 1.0
+Version 1.1
 
 Test your sensors with interactive little games
 You can view raw readings from all sensors too.
 
 Made by Sucharek233 :)
+This app is open source! Check it out on GitHub: https://github.com/Sucharek233/MB10-SensorTest
 
 WARNING!
 Some sensors can freeze and restart your band.

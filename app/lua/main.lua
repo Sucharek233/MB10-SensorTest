@@ -9,7 +9,7 @@ local function entry()
     
     local _, title = CreateCenteredLabel(root, "Sensor Test")
     title:set {
-        text_font = lvgl.Font(DefFont, 20)
+        text_font = lvgl.Font(DefFont, 24)
     }
     
     local knownBtn, knownBtnLabel = CreateBtn(root, "Known Sensors")

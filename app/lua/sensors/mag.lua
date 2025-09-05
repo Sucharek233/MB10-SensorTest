@@ -4,7 +4,7 @@ local sensor
 local sensorName, sensorPath, sensorProps, sensorPropsFormat
 
 local magLabel
-local magBarContainerHeight = ContentHeight - 180
+local magBarContainerHeight = ContentHeight - 195
 local magBarContainer
 local magBarFill
 local maxMag = 35000 -- 35000

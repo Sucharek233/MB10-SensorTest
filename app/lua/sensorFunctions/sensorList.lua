@@ -17,7 +17,7 @@ local function initSensorList()
         local sensorBtn = CreateBtn(sensorListContainer, sensor)
         sensorBtn:set {
             w = ContentWidth,
-            h = 50,
+            h = 55,
             bg_color = "#222",
             text_color = "#eee",
             text_font = lvgl.Font(DefFont, 18)
@@ -39,7 +39,7 @@ local function initPredefinedSensorList()
         local sensorBtn, sensorBtnLabel = CreateBtn(predefinedSensorListContainer, sensor.name)
         sensorBtn:set {
             w = ContentWidth,
-            h = 50,
+            h = 55,
             bg_color = "#222",
             text_color = "#eee"
         }
